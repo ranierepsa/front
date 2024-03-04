@@ -2,7 +2,7 @@
   Tabela de Usuários
 </h1>
 
-<button class="user-details-button" (click)="openUserDetails(user)">Novo Usuário</button>
+<button class="user-details-button" (click)="openUserDetailsWithoutParameters()">Novo Usuário</button>
 
 <table class="table" style=" width: 100%;">
   <thead>
@@ -23,8 +23,11 @@
   </thead>
   <tbody>
     <tr *ngFor="let user of users" style="text-align: center;">
-      <td style="width: 40px; height: 40px;"><button class="btn-edit table-btn" (click)="openUserDetails(user)"></button><button class="btn-delete table-btn" (click)="deleteUser(user.id)"></button><button class="btn-car table-btn" (click)="navigateToCars(user.id)"></button></td>
-      <!-- <td style="width: 40px; height: 40px;"><button class="btn-car table-btn" (click)="navigateToCars(user.id)"></button></td> -->
+      <td style="width: 40px; height: 40px;">
+        <button class="btn-edit table-btn" (click)="openUserDetails(user)"></button>
+        <button class="btn-delete table-btn" (click)="deleteUser(user.id)"></button>
+        <button class="btn-car table-btn" (click)="navigateToCars(user.id)"></button>
+      </td>
       <td>{{user.firstName}}</td>
       <td>{{user.lastName}}</td>
       <td>{{user.email}}</td>

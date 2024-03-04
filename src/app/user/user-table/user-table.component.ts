@@ -22,9 +22,12 @@ export class UserTableComponent implements OnInit {
     });
   }
 
+  openUserDetailsWithoutParameters() {
+    this.openUserDetails(new User());
+  }
+
   openUserDetails(user: User) {
-    let path = user != null ? `/users/${user.id}` : `/users/${null}`;
-    this.router.navigate([path], { queryParams: user });
+    this.router.navigate([`/users`], { queryParams: { user } });
   }
 
   deleteUser(userId: any) {

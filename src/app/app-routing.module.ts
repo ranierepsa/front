@@ -4,8 +4,9 @@ import { UserTableComponent } from './user/user-table/user-table.component';
 import { UserDetailComponent } from './user/user-detail/user-detail.component';
 
 const routes: Routes = [
-  { path: '', component: UserTableComponent },
-  { path: 'users/:user', component: UserDetailComponent}
+  { path: 'home', component: UserTableComponent },
+  { path: 'users', component: UserDetailComponent},
+  { path: '', redirectTo: '/home', pathMatch: 'full'},
 ];
 
 @NgModule({
