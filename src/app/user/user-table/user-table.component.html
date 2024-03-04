@@ -1,0 +1,36 @@
+<h1>
+  Tabela de Usuários
+</h1>
+
+<button class="user-details-button" (click)="openUserDetails(user)">Novo Usuário</button>
+
+<table class="table" style=" width: 100%;">
+  <thead>
+    <tr>
+      <th colspan="8" class="table-th">
+        Usuários
+      </th>
+    </tr>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Nome</th>
+      <th scope="col">Sobrenome</th>
+      <th scope="col">E-mail</th>
+      <th scope="col">Data de Nascimento</th>
+      <th scope="col">Login</th>
+      <th scope="col">Telefone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users" style="text-align: center;">
+      <td style="width: 40px; height: 40px;"><button class="btn-edit table-btn" (click)="openUserDetails(user)"></button><button class="btn-delete table-btn" (click)="deleteUser(user.id)"></button><button class="btn-car table-btn" (click)="navigateToCars(user.id)"></button></td>
+      <!-- <td style="width: 40px; height: 40px;"><button class="btn-car table-btn" (click)="navigateToCars(user.id)"></button></td> -->
+      <td>{{user.firstName}}</td>
+      <td>{{user.lastName}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.birthday}}</td>
+      <td>{{user.login}}</td>
+      <td>{{user.phone}}</td>
+    </tr>
+  </tbody>
+</table>

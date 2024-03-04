@@ -1,0 +1,35 @@
+.user-details-button {
+    width: 100px;
+    height: 30px;
+    margin-bottom: 20px;
+}
+
+.table-th {
+    width: 100%; 
+    color: white;
+    text-align: center; 
+    background-color: black; 
+}
+
+.table-btn {
+    width: 30px; 
+    height: 30px;
+    cursor: pointer;
+    border: none;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #00000000;
+}
+
+.btn-edit {
+    background-image: url('../../../assets/edit.svg');
+}
+
+.btn-delete {
+    background-image: url('../../../assets/minus.svg'); 
+}
+
+.btn-car { 
+    background-image: url('../../../assets/car.svg'); 
+}
